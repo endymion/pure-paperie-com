@@ -7,7 +7,7 @@ gem 'rails', '3.1.0'
 
 gem 'heroku'
 gem 'pg'
-
+gem 'sqlite3'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -28,7 +28,21 @@ gem 'jquery-rails'
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
 
-group :test do
-  # Pretty printed test output
-  gem 'turn', :require => false
+group(:test, :development) do
+  gem 'rspec-rails'
+  gem 'capybara'
+  gem 'database_cleaner'
+  gem 'SystemTimer'
+  gem 'watchr'
+  gem 'barista'
+  gem 'jasmine'
+  # The main fork of capybara-webkit tightly depends on an old version of Capybara, but this project
+  # needs Capybara >= 1.0.0 because it uses the Capybara integration testing DSL instead of
+  # using Cucumber.  Once the main fork of capybara-webkit has been updated to Capybara >= 1.0.0
+  # this :git parameter can be removed.
+  gem "capybara-webkit", :git => 'https://github.com/skddc/capybara-webkit.git'
+  gem 'jasmine-headless-webkit'
+  gem "factory_girl_rails", "~> 1.1.rc1"
+  gem 'launchy'
+  gem 'engineyard'
 end
