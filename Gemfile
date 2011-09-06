@@ -7,7 +7,6 @@ gem 'rails', '3.1.0'
 
 gem 'heroku'
 gem 'pg'
-gem 'sqlite3'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -29,10 +28,10 @@ gem 'jquery-rails'
 # gem 'ruby-debug19', :require => 'ruby-debug'
 
 group(:test, :development) do
+  gem 'sqlite3'
   gem 'rspec-rails'
   gem 'capybara'
   gem 'database_cleaner'
-  gem 'SystemTimer'
   gem 'watchr'
   gem 'barista'
   gem 'jasmine'
