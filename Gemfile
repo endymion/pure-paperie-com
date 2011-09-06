@@ -44,5 +44,5 @@ group(:test, :development) do
   gem 'jasmine-headless-webkit'
   gem "factory_girl_rails", "~> 1.1.rc1"
   gem 'launchy'
-  gem 'engineyard'
+  gem 'taps'
 end

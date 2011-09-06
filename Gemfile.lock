@@ -62,19 +62,7 @@ GEM
     coffee-script-source (1.1.2)
     database_cleaner (0.6.7)
     diff-lcs (1.1.3)
-    engineyard (1.3.22)
-      engineyard-serverside-adapter (= 1.4.2)
-      escape (~> 0.0.4)
-      highline (~> 1.6.1)
-      json_pure
-      net-ssh (~> 2.1.0)
-      rest-client (~> 1.6.0)
-      thor (~> 0.14.6)
-    engineyard-serverside-adapter (1.4.2)
-      escape (~> 0.0.4)
-      json_pure
     erubis (2.7.0)
-    escape (0.0.4)
     execjs (1.2.4)
       multi_json (~> 1.0)
     factory_girl (2.1.0)
@@ -87,7 +75,6 @@ GEM
       rest-client (~> 1.6.1)
       rubyzip
       term-ansicolor (~> 1.0.5)
-    highline (1.6.2)
     hike (1.2.1)
     i18n (0.6.0)
     jasmine (1.0.2.1)
@@ -114,7 +101,6 @@ GEM
       treetop (~> 1.4.8)
     mime-types (1.16)
     multi_json (1.0.3)
-    net-ssh (2.1.4)
     nokogiri (1.5.0)
     pg (0.11.0)
     polyglot (0.3.2)
@@ -171,12 +157,23 @@ GEM
       ffi (>= 1.0.7)
       json_pure
       rubyzip
+    sequel (3.20.0)
+    sinatra (1.0)
+      rack (>= 1.0)
     sprockets (2.0.0)
       hike (~> 1.2)
       rack (~> 1.0)
       tilt (!= 1.3.0, ~> 1.1)
     spruz (0.2.13)
     sqlite3 (1.3.4)
+    sqlite3-ruby (1.3.3)
+      sqlite3 (>= 1.3.3)
+    taps (0.3.23)
+      rack (>= 1.0.1)
+      rest-client (< 1.7.0, >= 1.4.0)
+      sequel (~> 3.20.0)
+      sinatra (~> 1.0.0)
+      sqlite3-ruby (~> 1.2)
     term-ansicolor (1.0.6)
     thor (0.14.6)
     tilt (1.3.3)
@@ -201,7 +198,6 @@ DEPENDENCIES
   capybara-webkit!
   coffee-rails (~> 3.1.0)
   database_cleaner
-  engineyard
   factory_girl_rails (~> 1.1.rc1)
   heroku
   jasmine
@@ -213,5 +209,6 @@ DEPENDENCIES
   rspec-rails
   sass-rails (~> 3.1.0)
   sqlite3
+  taps
   uglifier
   watchr
