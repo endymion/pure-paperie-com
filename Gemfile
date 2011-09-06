@@ -28,13 +28,14 @@ gem 'jquery-rails'
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
 
+gem 'barista'
+
 group(:test, :development) do
   gem 'rspec-rails'
   gem 'capybara'
   gem 'database_cleaner'
   gem 'SystemTimer'
   gem 'watchr'
-  gem 'barista'
   gem 'jasmine'
   # The main fork of capybara-webkit tightly depends on an old version of Capybara, but this project
   # needs Capybara >= 1.0.0 because it uses the Capybara integration testing DSL instead of

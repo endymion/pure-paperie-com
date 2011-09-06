@@ -82,7 +82,7 @@ GEM
       factory_girl (~> 2.1.0)
       railties (>= 3.0.0)
     ffi (1.0.9)
-    heroku (2.6.1)
+    heroku (2.7.0)
       launchy (>= 0.3.2)
       rest-client (~> 1.6.1)
       rubyzip
@@ -184,7 +184,7 @@ GEM
       polyglot
       polyglot (>= 0.3.1)
     tzinfo (0.3.29)
-    uglifier (1.0.2)
+    uglifier (1.0.3)
       execjs (>= 0.3.0)
       multi_json (>= 1.0.2)
     watchr (0.7)
