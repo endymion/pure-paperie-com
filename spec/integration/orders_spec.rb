@@ -9,7 +9,7 @@ feature "Orders", %q{ --
 
   scenario "when I go to the Orders page, I should see the word 'Orders'." do
     visit '/orders'
-    page.should have_content "Orders"
+    page.should have_content "orders"
   end
 
 end
