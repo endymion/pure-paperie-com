@@ -3,7 +3,7 @@ require 'integration_test_helper'
 feature "Orders", %q{ --
   As a staff member
   In order to process orders  
-  I want manage order information
+  I want to manage order information
   So
 } do
 
