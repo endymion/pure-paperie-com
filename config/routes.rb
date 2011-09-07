@@ -1,4 +1,6 @@
 PurePaperieCom::Application.routes.draw do
+  devise_for :users
+
   get "root/index"
 
   resources :orders

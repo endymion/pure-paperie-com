@@ -19,7 +19,12 @@ require 'spec_helper'
 # that an instance is receiving a specific message.
 
 describe OrdersController do
+  login_user
 
+  it "should have a current_user" do
+    subject.current_user.should_not be_nil
+  end
+  
   # This should return the minimal set of attributes required to create a valid
   # Order. As you add validations to Order, be sure to
   # update the return value of this method accordingly.
