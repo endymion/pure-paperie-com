@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe "orders/new.html.erb" do
   before(:each) do
-    assign(:order, stub_model(Order).as_new_record)
+    assign(:order, stub_model(Order, :uuid => UUIDTools::UUID.random_create.to_s).as_new_record)
   end
 
   it "renders new order form" do
