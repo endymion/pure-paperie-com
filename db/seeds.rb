@@ -11,3 +11,9 @@ User.create([
   {email: 'dade@shadowlounge.com', password: 'password'},
   {email: 'rebecca@whiteaisle.com', password: 'password'}
 ]).each {|user| user.confirm!}
+
+Category.create([
+  {title: 'Classic'},
+  {title: 'Green'},
+  {title: 'Vintage'}
+])

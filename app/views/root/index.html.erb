@@ -1,2 +1,6 @@
 <h1>Pure Paperie</h1>
-<p>Coming soon!</p>
+
+<%= form_for :order do |f| %>
+  <%= f.label(:category, 'Select a category to begin:') %>
+  <%= f.collection_select(:category, @categories, :id, :title) %>
+<% end %>
