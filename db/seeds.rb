@@ -6,11 +6,17 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-User.create([
-  {email: 'rap@endymion.com', password: 'password'},
-  {email: 'dade@shadowlounge.com', password: 'password'},
-  {email: 'rebecca@whiteaisle.com', password: 'password'}
-]).each {|user| user.confirm!}
+# Admins.
+emails = [
+  'rap@endymion.com',
+  'dade@shadowlounge.com',
+  'rebecca@whiteaisle.com'
+  ]
+options = {password: 'password', admin: true}
+User.create(emails.map{|email| options.merge({email: email})}).each {|user| user.confirm!}
+
+# Non-admin.
+User.create(email: 'test@test.com', password: 'password').confirm!
 
 Category.create([
   {title: 'Classic'},

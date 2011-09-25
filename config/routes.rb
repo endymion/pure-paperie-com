@@ -1,7 +1,8 @@
 PurePaperieCom::Application.routes.draw do
   ActiveAdmin.routes(self)
 
-  devise_for :users, ActiveAdmin::Devise.config
+  devise_for :users, ActiveAdmin::Devise.config # The admin login routes.
+  devise_for :account, :class_name => 'User' # The customer login routes.
 
   get "root/index"
 
