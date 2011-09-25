@@ -36,3 +36,21 @@ Order.create(
   state: 'FL',
   zip: '33139'
 )
+
+Order.create(
+  first: 'Dade',
+  last: 'Sokoloff',
+  address1: 'Somewhere',
+  city: 'Somewhere',
+  state: 'NH',
+  zip: '56789'
+)
+
+Order.create(
+  first: 'Tori',
+  last: 'Spelling',
+  address1: 'Somewhere',
+  city: 'Melrose',
+  state: 'CA',
+  zip: '90210'
+)
