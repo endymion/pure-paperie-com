@@ -14,6 +14,21 @@ ActiveAdmin::Dashboards.build do
   #       end
   #     end
   #   end
+  section "Recently Created Orders" do
+    ul do
+      Order.recently_created(5).collect do |order|
+        li link_to(order.last, admin_order_path(order))
+      end
+    end
+  end
+  section "Recently Updated Orders" do
+    ul do
+      Order.recently_updated(5).collect do |order|
+        li link_to(order.last, admin_order_path(order))
+      end
+    end
+  end
+
   
   # == Render Partial Section
   # The block is rendered within the context of the view, so you can
