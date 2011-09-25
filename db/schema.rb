@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110925165220) do
+ActiveRecord::Schema.define(:version => 20110925181026) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.integer  "resource_id",   :null => false
@@ -38,6 +38,13 @@ ActiveRecord::Schema.define(:version => 20110925165220) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.binary   "uuid",       :limit => 36
+    t.string   "first"
+    t.string   "last"
+    t.string   "address1"
+    t.string   "address2"
+    t.string   "city"
+    t.string   "state"
+    t.string   "zip"
   end
 
   create_table "users", :force => true do |t|
